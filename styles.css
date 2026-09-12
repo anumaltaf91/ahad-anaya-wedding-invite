@@ -1,0 +1,57 @@
+@font-face{font-family:"High Spirited";src:url("assets/fonts/high-spirited.ttf") format("truetype");font-display:block}
+@font-face{font-family:"Batang";src:url("assets/fonts/batang-regular.ttf") format("truetype");font-display:block}
+@font-face{font-family:"Bodoni 72";src:url("assets/fonts/bodoni-72.ttc") format("truetype");font-display:block}
+:root{--dark:#3f403c;--ivory:#ebe4d6;--ink:#1e1e1e;--ease:cubic-bezier(.22,.61,.36,1)}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:var(--dark)}
+body{overflow-x:hidden;color:var(--ivory);font-family:"Batang",serif;font-synthesis:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font:inherit;color:inherit;border:0;padding:0;background:none;cursor:pointer}
+img{display:block;pointer-events:none;-webkit-user-drag:none;user-drag:none}
+.invitation{width:min(100vw,390px);height:calc(min(100vw,390px) * 961 / 390);min-height:min(100svh,961px);margin:0 auto;overflow:hidden;background:var(--dark)}
+.stage{position:relative;width:390px;height:961px;transform-origin:top left;transform:scale(calc(min(100vw,390px) / 390));overflow:hidden;background:var(--dark)}
+.closed-state,.open-state,.details-state{position:absolute;inset:0;transition:opacity 800ms var(--ease),transform 800ms var(--ease);overflow:hidden}.closed-state{transform:translateY(46px)}
+.crop{position:absolute;display:block;overflow:hidden}
+.crop img{position:absolute;max-width:none}
+.names{position:absolute;margin:0;font-family:"High Spirited",cursive;font-size:60px;font-weight:400;line-height:1;white-space:nowrap}
+.closed-names{left:45px;top:66px}.knot{position:absolute;left:103px;top:133px;margin:0;font-size:16px;line-height:23px;white-space:nowrap}
+.open-trigger{position:absolute;inset:156px -21px 344px -30px;outline-offset:-4px}button:focus,button:focus-visible{outline:none}.keyboard-nav .open-trigger:focus,.keyboard-nav .tap-open:focus,.keyboard-nav .details-trigger:focus,.keyboard-nav .vinyl-control:focus,.keyboard-nav .back-top:focus{outline:2px solid currentColor}
+.closed-paper-left{left:0;top:179px;width:282px;height:212px}.closed-paper-left img,.paper-left img{width:262.48%;height:195.92%;left:-78.57%;top:-19.33%}
+.closed-paper-right{left:156px;top:27px;width:272px;height:275px}.closed-paper-right img,.paper-right img,.details-left img{width:209.15%;height:116.41%;left:-92.51%;top:-16.41%}
+.closed-writing-one{left:62px;top:35px;width:239px;height:250px}.closed-writing-two{left:258px;top:213px;width:183px;height:191px}.closed-writing-one img,.closed-writing-two img,.writing-one img,.writing-two img,.writing-three img,.details-top-right img{width:455.02%;height:245.05%;left:-78.21%;top:-97.15%}
+.envelope-closed{left:88px;top:120px;width:280px;height:185px}.envelope-closed img{width:175.71%;height:149.51%;left:-37.86%;top:-49.35%}
+.seal-flower{left:199px;top:165px;width:68px;height:88px;transition:opacity 320ms var(--ease),transform 320ms var(--ease)}.seal-flower img,.pressed-flower img{width:1067.28%;height:464.96%;left:-507.72%;top:-144.73%}
+.wax-seal{left:206px;top:209px;width:51px;height:52px;transition:opacity 300ms var(--ease),transform 300ms var(--ease)}.wax-seal img{width:1087.27%;height:589.17%;left:-389.51%;top:-200.72%}
+.tap-open{position:absolute;left:160px;top:549px;font-size:12px;line-height:17px;white-space:nowrap;letter-spacing:0}
+.tap-open::after{content:"";position:absolute;inset:-16px -20px}
+.open-state{opacity:0;pointer-events:none}.open-scene{position:absolute;inset:0;transform:translateY(46px);transition:transform 1000ms var(--ease)}
+.paper-left{left:-30px;top:335px;width:282px;height:212px}.paper-right{left:126px;top:183px;width:272px;height:275px}
+.writing-one{left:32px;top:191px;width:239px;height:250px}.writing-two{left:228px;top:369px;width:183px;height:191px}.writing-three{left:32px;top:560px;width:183px;height:191px}.writing-one img,.writing-two img,.writing-three img{width:455.02%;height:245.05%;left:-78.21%;top:-97.15%}
+.save-date-group{position:absolute;left:50px;top:156px;width:289px;height:306px;z-index:2}.save-date-card{inset:0}.save-date-card img{width:196.41%;height:104.25%;left:-47.77%;top:-4.25%}
+.printed-paper{left:8px;top:12px;width:204px;height:233px}.printed-paper img{width:335.61%;height:165.52%;left:-95.72%;top:-23.12%}
+.sheet-music{left:111px;top:285px;width:181px;height:148px;z-index:3}.sheet-music img,.details-bottom-right img{width:411.19%;height:282.84%;left:-156.94%;top:-140.73%}
+.pressed-flower{left:174px;top:285px;width:68px;height:88px;transform:rotate(-28.54deg);z-index:4}
+.envelope-open{left:61px;top:274px;width:275px;height:189px;z-index:5}.envelope-open img{width:205.45%;height:168.42%;left:-53.79%;top:-68.42%}
+.reveal-piece{opacity:0;transform:translateY(92px);transition:opacity 700ms var(--ease),transform 1050ms var(--ease)}
+.card-copy{position:absolute;z-index:6;color:var(--dark);white-space:nowrap;transform:rotate(-10.36deg);transform-origin:center}.save-label{left:50px;top:83px;font-size:12px}.date-card{left:61px;top:104px;font-family:"Bodoni 72",serif;font-size:16px;font-weight:700}.getting-married{left:45px;top:125px;font-family:"High Spirited",cursive;color:var(--ink);font-size:24px;font-weight:400}
+.details-trigger{position:absolute;left:95px;top:349px;width:154px;height:317px;z-index:6}.details-card{inset:0}.details-card img{width:365.16%;height:100%;left:-121.26%;top:0}.view-label{position:absolute;left:40px;top:136px;color:var(--dark);font-size:10px;white-space:nowrap}.details-script{position:absolute;left:30px;top:147px;color:var(--ink);font-family:"High Spirited",cursive;font-size:40px;font-weight:400;white-space:nowrap}
+.botanical-strip{left:64.66px;top:481.35px;width:112.72px;height:268.56px;transform:rotate(-22.82deg)}.botanical-strip img{width:423.8%;height:100%;left:-147.45%;top:0}
+.vinyl{left:168px;top:567px;width:120px;height:120px;z-index:3;transform-origin:50% 50%;will-change:transform;pointer-events:none}.vinyl img{width:445.13%;height:250%;left:-66.21%;top:-24.85%}.vinyl.is-idle{animation:vinylCue 3s ease-in-out infinite}.vinyl.is-playing{animation:vinylSpin 5s linear infinite;animation-play-state:running}.vinyl.is-playing.is-paused{animation-play-state:paused}.vinyl-control{position:absolute;left:168px;top:567px;width:120px;height:120px;z-index:8;border-radius:50%;cursor:pointer}.vinyl-control::before{content:"";position:absolute;left:52px;top:47px;width:0;height:0;border-top:13px solid transparent;border-bottom:13px solid transparent;border-left:20px solid rgba(235,228,214,.9);filter:drop-shadow(0 1px 2px rgba(0,0,0,.35));transition:opacity 220ms ease}.vinyl-control.is-playing::before{opacity:0}.music-staff{left:252px;top:571px;width:143px;height:56px}.music-staff img{width:301.45%;height:431.75%;left:-152.86%;top:-185.45%}
+.count-divider{position:absolute;left:75px;top:794px;width:240px;height:1px;background:rgba(235,228,214,.65)}
+.countdown{position:absolute;top:815px;left:145px;width:100px;text-align:center}.count-values{font-family:"Bodoni 72",serif;font-size:22px;font-weight:700;white-space:nowrap}.count-values b{font-weight:400;margin:0 3px}.count-labels{display:grid;grid-template-columns:repeat(3,1fr);margin-top:2px;font-size:8px}.ever-after{position:absolute;left:77px;top:853px;margin:0;font-family:"High Spirited",cursive;font-size:40px;font-weight:400;white-space:nowrap}
+.details-state{opacity:0;pointer-events:none;background:var(--ivory);color:var(--dark);transform:translateY(30px)}
+.details-top-right{left:250px;top:-11px;width:202px;height:211px}.details-left{left:-150px;top:21px;width:272px;height:275px}.details-bottom-right{left:269px;top:393px;width:181px;height:148px}
+.details-intro{position:absolute;left:110px;top:190px;width:171px;margin:0;text-align:center;font-family:"Bodoni 72",serif;font-size:18px;line-height:22px}.details-names{left:41px;top:251px}.event-date,.event-time,.venue{position:absolute;margin:0;white-space:nowrap;font-family:"Bodoni 72",serif}.event-date{left:105px;top:375px;font-size:22px;font-weight:700}.event-time{left:149px;top:431px;font-size:22px}.venue{left:84px;top:487px;font-size:18px}.vertical-rule{position:absolute;left:195px;width:1px;height:23px;background:var(--dark)}.rule-one{top:402px}.rule-two{top:457px}.back-top{position:absolute;left:169px;top:600px;color:var(--ink);font-family:"High Spirited",cursive;font-size:18px;white-space:nowrap}.back-top::after{content:"";position:absolute;inset:-14px -18px}
+.invitation[data-state="opening"] .wax-seal,.invitation[data-state="opening"] .seal-flower{opacity:0;transform:scale(.78)}
+.invitation[data-state="opening"] .closed-state,.invitation[data-state="revealed"] .closed-state,.invitation[data-state="details"] .closed-state{opacity:0;transform:translateY(46px) scale(.985);pointer-events:none}
+.invitation[data-state="opening"] .open-state,.invitation[data-state="revealed"] .open-state{opacity:1;pointer-events:auto}
+.invitation[data-state="opening"] .reveal-piece,.invitation[data-state="revealed"] .reveal-piece{opacity:1;transform:translateY(0)}
+.invitation[data-state="opening"] .sheet-music{transition-delay:420ms}.invitation[data-state="opening"] .pressed-flower{transition-delay:560ms;transform:rotate(-28.54deg)}
+.invitation[data-state="revealed"] .open-scene{transform:translate(-5px,-106px)}
+.invitation[data-state="revealed"] .details-trigger{animation:cardCue 2.8s ease-in-out infinite}
+.invitation[data-state="details"] .open-state{opacity:0;transform:translateY(-30px);pointer-events:none}.invitation[data-state="details"] .details-state{opacity:1;transform:none;pointer-events:auto}
+@keyframes cardCue{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@keyframes vinylCue{0%,100%{transform:scale(1);filter:brightness(1)}50%{transform:scale(1.025);filter:brightness(1.035)}}
+@keyframes vinylSpin{to{transform:rotate(360deg)}}
+@media (hover:hover){.details-trigger:hover{filter:brightness(1.035);transform:translateY(-2px)}}
+@media (min-width:391px){body{display:grid;place-items:start center}.invitation{box-shadow:0 0 45px rgba(0,0,0,.22)}}
+@media (prefers-reduced-motion:reduce){.closed-state,.open-state,.details-state,.open-scene,.reveal-piece,.wax-seal,.seal-flower{transition-duration:1ms!important;transition-delay:0ms!important}.details-trigger,.vinyl{animation:none!important}}

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#3f403c">
+  <title>Ahad &amp; Anaya</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="invitation" id="invitation" data-state="closed">
+    <section class="stage stage-dark" aria-label="Interactive wedding invitation for Ahad and Anaya">
+      <div class="closed-state" id="closedState">
+        <p class="names closed-names">Ahad&nbsp; &amp; Anaya</p>
+        <p class="knot">ARE TYING THE KNOT</p>
+        <button class="open-trigger" id="openTrigger" type="button" aria-label="Open Ahad and Anaya's wedding invitation">
+          <span class="crop closed-paper-left"><img src="assets/images/closed-paper-left.png" alt=""></span>
+          <span class="crop closed-paper-right"><img src="assets/images/closed-paper-right.png" alt=""></span>
+          <span class="crop closed-writing-one"><img src="assets/images/closed-writing.png" alt=""></span>
+          <span class="crop closed-writing-two"><img src="assets/images/closed-writing.png" alt=""></span>
+          <span class="crop envelope-closed"><img src="assets/images/envelope-closed.png" alt=""></span>
+          <span class="crop seal-flower"><img src="assets/images/seal-flower.png" alt=""></span>
+          <span class="crop wax-seal"><img src="assets/images/wax-seal.png" alt=""></span>
+        </button>
+        <button class="tap-open" id="tapOpen" type="button">TAP TO OPEN</button>
+      </div>
+
+      <div class="open-state" id="openState" aria-hidden="true">
+        <div class="open-scene" id="openScene">
+          <span class="crop paper-left"><img src="assets/images/paper-left.png" alt=""></span>
+          <span class="crop paper-right"><img src="assets/images/paper-right.png" alt=""></span>
+          <span class="crop writing-one"><img src="assets/images/writing.png" alt=""></span>
+          <span class="crop writing-two"><img src="assets/images/writing.png" alt=""></span>
+          <span class="crop writing-three"><img src="assets/images/writing.png" alt=""></span>
+
+          <div class="reveal-piece save-date-group">
+            <span class="crop save-date-card"><img src="assets/images/save-date-card.png" alt=""></span>
+            <span class="crop printed-paper"><img src="assets/images/printed-paper.png" alt=""></span>
+            <span class="card-copy save-label">SAVE THE DATE</span>
+            <span class="card-copy date-card">01: 12 : 2026</span>
+            <span class="card-copy getting-married">we are getting married</span>
+          </div>
+          <span class="crop reveal-piece sheet-music"><img src="assets/images/sheet-music.png" alt=""></span>
+          <span class="crop reveal-piece pressed-flower"><img src="assets/images/pressed-flower.png" alt=""></span>
+          <span class="crop envelope-open"><img src="assets/images/envelope-open.png" alt=""></span>
+
+          <button class="details-trigger" id="detailsTrigger" type="button" aria-label="View wedding details">
+            <span class="crop details-card"><img src="assets/images/details-card.png" alt=""></span>
+            <span class="view-label">TAP TO VIEW</span>
+            <span class="details-script">the details</span>
+          </button>
+
+          <span class="crop botanical-strip"><img src="assets/images/botanical-strip.png" alt=""></span>
+          <span class="crop vinyl is-idle" id="vinylArtwork" aria-hidden="true"><img src="assets/images/vinyl.png" alt=""></span>
+          <button class="vinyl-control" id="vinylControl" type="button" aria-label="Play music"></button>
+          <audio id="weddingAudio" preload="metadata" src="assets/audio/wedding-song.mp3"></audio>
+          <span class="crop music-staff"><img src="assets/images/music-staff.png" alt=""></span>
+          <span class="count-divider" aria-hidden="true"></span>
+          <div class="countdown" id="countdown" aria-live="polite">
+            <div class="count-values">
+              <span id="days">00</span><b>:</b><span id="hours">00</span><b>:</b><span id="minutes">00</span>
+            </div>
+            <div class="count-labels"><span>Days</span><span>Hours</span><span>Minutes</span></div>
+          </div>
+          <p class="ever-after">to our happily ever after..</p>
+        </div>
+      </div>
+
+      <div class="details-state" id="detailsState" aria-hidden="true">
+        <span class="crop details-top-right"><img src="assets/images/details-top-right.png" alt=""></span>
+        <p class="details-intro">Join us to celebrate the<br>joyful begining of</p>
+        <p class="names details-names">Ahad&nbsp; &amp; Anaya</p>
+        <span class="crop details-left"><img src="assets/images/details-left.png" alt=""></span>
+        <p class="event-date">01 December 2026</p>
+        <span class="vertical-rule rule-one"></span>
+        <p class="event-time">07:00 PM</p>
+        <span class="vertical-rule rule-two"></span>
+        <p class="venue">Marquee, Expressway, Islamabad</p>
+        <span class="crop details-bottom-right"><img src="assets/images/details-bottom-right.png" alt=""></span>
+        <button class="back-top" id="backTop" type="button" aria-label="Return to the closed invitation">back to top</button>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
