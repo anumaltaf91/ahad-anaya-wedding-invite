@@ -46,9 +46,9 @@ img{display:block;pointer-events:none;-webkit-user-drag:none;user-drag:none}
 .invitation[data-state="opening"] .open-state,.invitation[data-state="revealed"] .open-state{opacity:1;pointer-events:auto}
 .invitation[data-state="opening"] .reveal-piece,.invitation[data-state="revealed"] .reveal-piece{opacity:1;transform:translateY(0)}
 .invitation[data-state="opening"] .sheet-music{transition-delay:420ms}.invitation[data-state="opening"] .pressed-flower{transition-delay:560ms;transform:rotate(-28.54deg)}
-.invitation[data-state="revealed"] .open-scene{transform:translate(-5px,-106px)}
-.invitation[data-state="revealed"] .save-date-group,.invitation[data-state="revealed"] .save-date-copy{transform:translateY(-18px)}
-.invitation[data-state="revealed"] .details-trigger{top:339px;animation:cardCue 2.8s ease-in-out infinite}.open-scene.is-content-revealed .countdown{opacity:1;transform:translateY(0);transition-delay:350ms}.open-scene.is-content-revealed .details-copy{opacity:1;transform:translateY(0);transition-delay:600ms}
+.invitation[data-state="opening"] .open-scene,.invitation[data-state="revealed"] .open-scene{transform:translate(-5px,-106px)}
+.invitation[data-state="opening"] .save-date-group,.invitation[data-state="opening"] .save-date-copy,.invitation[data-state="revealed"] .save-date-group,.invitation[data-state="revealed"] .save-date-copy{transform:translateY(-18px)}
+.invitation[data-state="opening"] .details-trigger,.invitation[data-state="revealed"] .details-trigger{top:339px}.invitation[data-state="revealed"] .details-trigger{animation:cardCue 2.8s ease-in-out infinite}.open-scene.is-content-revealed .countdown{opacity:1;transform:translateY(0);transition-delay:350ms}.open-scene.is-content-revealed .details-copy{opacity:1;transform:translateY(0);transition-delay:600ms}
 .invitation[data-state="details"] .open-state{opacity:0;transform:translateY(-30px);pointer-events:none}.invitation[data-state="details"] .details-state{opacity:1;transform:none;pointer-events:auto}
 @keyframes cardCue{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
 @keyframes vinylCue{0%,100%{transform:scale(1);filter:brightness(1)}50%{transform:scale(1.025);filter:brightness(1.035)}}
