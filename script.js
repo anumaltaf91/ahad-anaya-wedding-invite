@@ -1,5 +1,6 @@
 const invitation = document.querySelector('#invitation');
 const openState = document.querySelector('#openState');
+const openScene = document.querySelector('#openScene');
 const detailsState = document.querySelector('#detailsState');
 const openButtons = [document.querySelector('#openTrigger'), document.querySelector('#tapOpen')];
 const detailsTrigger = document.querySelector('#detailsTrigger');
@@ -34,9 +35,13 @@ const openInvitation = async () => {
   if (transitionLocked || invitation.dataset.state !== 'closed') return;
   transitionLocked = true;
   await preloadCriticalAssets();
+  openScene.classList.remove('is-content-revealed');
   invitation.dataset.state = 'opening';
   openState.setAttribute('aria-hidden', 'false');
-  later(() => { invitation.dataset.state = 'revealed'; }, 1450);
+  later(() => {
+    invitation.dataset.state = 'revealed';
+    openScene.classList.add('is-content-revealed');
+  }, 1450);
   later(() => { transitionLocked = false; }, 2500);
 };
 
@@ -53,6 +58,7 @@ const resetInvitation = () => {
   if (transitionLocked) return;
   transitionLocked = true;
   clearSequence();
+  openScene.classList.remove('is-content-revealed');
   invitation.dataset.state = 'closed';
   detailsState.setAttribute('aria-hidden', 'true');
   openState.setAttribute('aria-hidden', 'true');
